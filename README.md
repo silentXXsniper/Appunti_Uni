@@ -10,15 +10,19 @@ Tutti i file sono in formato PDF o notebook Jupyter (.ipynb) già eseguiti - sto
 
 I corsi seguono un color coding specifico:
 
-- **algoritmi e strutture dati** - Blu
-- **sistemi operativi** - Verde
-- **statistica** - Arancione (work in progress per la formattazione)
+- Algoritmi e Strutture Dati — Blu (*#3498db*)
+- Sistemi Operativi — Verde (*#1e7d45*)
+- Statistica — Arancione (*#e67e22*)
+- Fisica — Rosso (*#e74c3c*)
+- TW per il claude — Viola (*#8e44ad*)
+- Machine Learning — Ciano (*#00b4d8*)
+- Fondamentali di Informatica — Blu Notte (*#2c3e50*)
   
 (a seguire verranno aggiunti altri corsi e colori)
 
 ## Note:
 
-- Aggiorno gli appunti su Ghitub sporiadicamente, principalmente quando finisco un capitolo e ho avuto tempo di rivederli (l'ultimo aggiornamente è comunque visibile in alto a sinistra nei files PDF). 
+- Aggiorno gli appunti su GitHub sporiadicamente, principalmente quando finisco un capitolo e ho avuto tempo di rivederli (l'ultimo aggiornamento è comunque visibile in alto a sinistra nei files PDF). 
 
 - Possono contenere errori/imprecisioni.
 
