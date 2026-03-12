@@ -14,7 +14,7 @@ I corsi seguono un color coding specifico:
 - Sistemi Operativi — Verde (*#1e7d45*)
 - Statistica — Arancione (*#e67e22*)
 - Fisica — Rosso (*#e74c3c*)
-- TW per il claude — Viola (*#8e44ad*)
+- TW per il cloud — Viola (*#8e44ad*)
 - Machine Learning — Ciano (*#00b4d8*)
 - Fondamentali di Informatica — Blu Notte (*#2c3e50*)
   
