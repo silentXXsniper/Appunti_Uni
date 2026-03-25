@@ -6,7 +6,7 @@ Questo repository contiene appunti e materiali di studio per vari corsi universi
 
 Gli appunti sono divisi per Anno di corso, con ogni anno che contiene cartelle per ogni materia.
 
-Tutti i file sono in formato PDF o notebook Jupyter (.ipynb) già eseguiti - sto valutando di pre esportarli come slides ma devo rivedere la struttura.
+Tutti i file sono in formato PDF, html o notebook Jupyter (.ipynb) già eseguiti - sto valutando di pre esportarli come slides ma devo rivedere la struttura.
 
 I corsi seguono un color coding specifico:
 
@@ -26,6 +26,7 @@ I corsi seguono un color coding specifico:
 
 - Possono contenere errori/imprecisioni.
 
-- Fornisco solo i PDF finali, non i markdown originali
+- Fornisco solo i PDF/html finali, non i markdown originali
 - chi vuole fare notare errori o suggerire miglioramenti può aprire una issue o contattarmi direttamente.
+- i formati html li sto implementando ma sono ancora una funzione sperimentale
 - questa repository è ancora in fase di sviluppo, quindi aspettatevi cambiamenti nella struttura e nei contenuti.
