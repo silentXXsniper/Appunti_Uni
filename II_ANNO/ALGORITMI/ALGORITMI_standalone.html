@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-05-15 14:44</span>
+        <span><b>Ultima modifica:</b> 2026-05-18 16:17</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -845,6 +845,16 @@ img {
 </ul>
 </li>
 <li><a href="#algoritmo-di-prim">Algoritmo di Prim</a></li>
+</ul>
+</li>
+<li><a href="#cammini-minimi---di-peso-minimo">Cammini minimi - di peso minimo</a>
+<ul>
+<li><a href="#single-source-shortest-path">Single Source Shortest Path</a></li>
+<li><a href="#all-pairs-shortest-path">All Pairs Shortest Path</a>
+<ul>
+<li><a href="#algoritmo-di-floyd-warshall">Algoritmo di Floyd-Warshall</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -3060,7 +3070,15 @@ $$\large \lbrace u, v \rbrace \text{ è SAFE per } A$$</p>
     />
   </div>
 </div>
-<pre class="hljs"><code><div>Kruskal(G=(v,E,W)){
+<pre class="hljs"><code><div>$$\   $$\                               $$\                $$\ 
+$$ | $$  |                              $$ |               $$ |
+$$ |$$  /  $$$$$$\  $$\   $$\  $$$$$$$\ $$ |  $$\ $$$$$$\  $$ |
+$$$$$  /  $$  __$$\ $$ |  $$ |$$  _____|$$ | $$  |\____$$\ $$ |
+$$  $$&lt;   $$ |  \__|$$ |  $$ |\$$$$$$\  $$$$$$  / $$$$$$$ |$$ |
+$$ |\$$\  $$ |      $$ |  $$ | \____$$\ $$  _$$&lt; $$  __$$ |$$ |
+$$ | \$$\ $$ |      \$$$$$$  |$$$$$$$  |$$ | \$$\\$$$$$$$ |$$ |
+\__|  \__|\__|       \______/ \_______/ \__|  \__|\_______|\__|                                                        
+Kruskal(G=(v,E,W)){
     Sort(E) # ordino gli archi in ordine crescente di peso
     A &lt;- []
     for (each v in u){
@@ -3187,7 +3205,15 @@ pi[u]  # nodo di partenza dell'arco
     </p>
   </div>
 </div>
-<pre class="hljs"><code><div>Prim(G=(V,E,W),s){
+<pre class="hljs"><code><div>$$$$$$$\            $$\               
+$$  __$$\           \__|              
+$$ |  $$ | $$$$$$\  $$\ $$$$$$\$$$$\  
+$$$$$$$  |$$  __$$\ $$ |$$  _$$  _$$\ 
+$$  ____/ $$ |  \__|$$ |$$ / $$ / $$ |
+$$ |      $$ |      $$ |$$ | $$ | $$ |
+$$ |      $$ |      $$ |$$ | $$ | $$ |
+\__|      \__|      \__|\__| \__| \__|                                                              
+Prim(G=(V,E,W),s){
     for (each u in V){
         key[u] &lt;- +infinity
         pi[u] &lt;- NIL
@@ -3230,6 +3256,133 @@ Teorema del taglio (Q,V\Q)</li>
 </ol>
 <p><strong>Esercizio</strong>: <br>
 Valutare la complessità senza usare la mean heap</p>
+<h3 id="cammini-minimi---di-peso-minimo">Cammini minimi - di peso minimo</h3>
+<p>avendo $G=(V,E,W)$ (orientato o non orientato) pesato, con $W:E \to \mathbb{R}^{+}$ <br>
+<strong>cammino</strong>: Sequenza di archi consecutivi <br>
+$$u_0 \to u_1 \to u_2 \to \ldots \to u_k$$
+<strong>Peso di un cammino</strong>: (con k peso di un arco)<br>
+$$W(u_0 \to u_1 \to u_2 \to \ldots \to u_k) = \sum_{i=1}^{k} k_i$$</p>
+<h4 id="single-source-shortest-path">Single Source Shortest Path</h4>
+<p>Dato $s \in V \space \forall u \in V $, calcolare un cammino di peso minimo da $s \text{ a } u$ <br></p>
+<p>Abbiamo già visto un algoritmo simile (BFS), ma funziona solo con cammini di lunghezza minima da <em>S</em></p>
+<ul>
+<li>$W : E \to \mathbb{R}^{+} \quad \forall (u,v) \in E  \quad W((u,v)) = 1$ <br>
+Analogo se $\forall (u,v) \in E, \quad W((u,v)) = k$ costante, con un costo di $O(|V| + |E|)$ <br>
+e utlizza come strutture:</li>
+<li><strong>colori</strong>: per evitare di visitare più volte lo stesso nodo</li>
+<li><strong>$\pi$</strong>: per memorizzare la distanza minima da <em>S</em></li>
+<li><strong>$d$</strong>: per memorizzare il nodo precedente nel cammino minimo da <em>S</em> a <em>u</em></li>
+<li><strong>coda</strong>: per gestire i nodi da visitare</li>
+</ul>
+<p>Il problema è che la coda in DFS bastava per le sue necessità, perchè se guardavo le distanze di questi nodi, vi era un blocco di distanza h, e poi un blocco di distanza h+1, e così via, quindi non c'era bisogno di una struttura dati più complessa, perchè i cammini sucessivi erano sempre maggiori o uguali a quelli precedenti <br></p>
+<p>Dovremmo cambiare la coda in una Min Heap per risolvere il problema. <br></p>
+<pre class="hljs"><code><div>$$$$$$$\  $$\     $$\                   $$\                        
+$$  __$$\ \__|    $$ |                  $$ |                       
+$$ |  $$ |$$\ $$\ $$ |  $$\  $$$$$$$\ $$$$$$\    $$$$$$\  $$$$$$\  
+$$ |  $$ |$$ |\__|$$ | $$  |$$  _____|\_$$  _|  $$  __$$\ \____$$\ 
+$$ |  $$ |$$ |$$\ $$$$$$  / \$$$$$$\    $$ |    $$ |  \__|$$$$$$$ |
+$$ |  $$ |$$ |$$ |$$  _$$&lt;   \____$$\   $$ |$$\ $$ |     $$  __$$ |
+$$$$$$$  |$$ |$$ |$$ | \$$\ $$$$$$$  |  \$$$$  |$$ |     \$$$$$$$ |
+\_______/ \__|$$ |\__|  \__|\_______/    \____/ \__|      \_______|
+        $$\   $$ |                                                 
+        \$$$$$$  |                                                 
+         \______/                                                                                                 
+Dijkstra(G=(V,E,W),s){  # W pesi positivi
+    for(each v in V){
+        pi[v] &lt;- NIL
+        d[v] &lt;- +infinity
+    }
+    dw[s] &lt;- 0
+    Q &lt;- V
+    Build_Min_Heap(Q) # ordinato rispetto al valore dw
+    while(Q != empty){
+        u &lt;- Extract_Min(Q)
+        for (each v in Adj[u]){
+            if (v in Q &amp;&amp; dw[v] &gt; dw[u] + W((u,v))){
+                dw[v] &lt;- dw[u] + W((u,v))
+                pi[v] &lt;- u
+                Decrease_Key(Q,v) # Ripristino la min heap
+            }
+        }
+    }
+
+}
+</div></code></pre>
+<p><em>Nota</em>: l'algoritmo funzionerebbe anche senza <code>v in Q</code> ma è stato inserito per evitare dubbi (al contrario di Prim, dove è fondamentale)</p>
+<p><strong>Correttezza</strong>: <br></p>
+<ol>
+<li>Se ho un cammino di peso minimo da <em>s</em> ad <em>a</em>  e da <em>a</em> a <em>b</em>, unendoli ho un cammino di peso minimo da <em>s</em> a <em>b</em>? <br>
+<strong>NO</strong></li>
+<li>Se ho un cammino di peso minimo da <em>s</em> a <em>b</em> e <em>a</em> è un nodo sul cammino, allora i sottocammini da <em>s</em> ad <em>a</em> e da <em>a</em> a <em>b</em> sono di peso minimo? <br>
+<strong>SI</strong> <br></li>
+</ol>
+<p><strong>Complessità</strong>: <br></p>
+<ul>
+<li>per il for: $\theta(|V|)$</li>
+<li>While: $(O|E|log|V|)$ <br>
+Totale $O(|E|log|V|)$</li>
+</ul>
+<p>Se usassimo Q come un vettore ordinato,seppur più semplice da scrivere, avremmo una complessità di $O(|V|^2)$, che è peggio di quella di Prim, quindi è importante usare la Min Heap. <strong>tuttavia</strong>, avendo fatto sparire |E|, potrebbe essere vantaggiosa se il grafo è molto denso.</p>
+<h4 id="all-pairs-shortest-path">All Pairs Shortest Path</h4>
+<p>$\forall u,v, \in V $ calcola un cammino di peso minimo da $u \text{ a } v$ <br>
+Questo si vede subito nei navigatori (caso più semplice), ma ci sono anche dati più complessi, come una rete di consegne, perchè sia consumi e percorrenze cambiano nel giro di una giornata, con algoritmi estremamente più sofisticati di quelli che vedremo</p>
+<p>ci sono due soluzioni:</p>
+<pre class="hljs"><code><div>for(each u in V){   # restituisce due vettori di vettori (due matrici)
+    Dijkstra(G,u)   # -&gt; pi[u][v] dw [u][v]
+}
+</div></code></pre>
+<p><strong>Complessità</strong>:</p>
+<ul>
+<li>$O(|V|\cdot|E|log|V|)$ con Min Heap</li>
+<li>$O(|V|^3)$ con vettore ordinato</li>
+</ul>
+<h5 id="algoritmo-di-floyd-warshall">Algoritmo di Floyd-Warshall</h5>
+<p><strong>idea</strong>: <br>
+Alla i-esima iterazione, costruisico solo cammini di cui nodi interni sono compresi tra 1 e i-1 <br>
+i = 1 $\rightarrow$ nodi interni tra 1 e 0 $\rightarrow$ nessun nodo interno: $[1,0]=\emptyset$ <br>
+i generico: $j \in [1,i-1]$: tra peso minimo tutti i cammini da u a v con nodi interni in [1,i-1] <br></p>
+<p>Come aggiorno il risultato al passo i + 1? <br></p>
+<ul>
+<li>nodi interni [1,i]</li>
+<li>i compare al più una volta, con nomi compresi tra 1 e i-1, da confrontare con il costo minimo di u e v, calcolato al passo precedente, Tenere il minimo  <br></li>
+</ul>
+<p>DW <br></p>
+<ul>
+<li>DW_1= W matrice dei pesi $+ \infty$ se non l'arco</li>
+</ul>
+<p>$$DW_{i +1} = \min(DW_i[w,v], DW_{i}[u,i]+DW_{i}[i,v])$$</p>
+<pre class="hljs"><code><div>$$$$$$$$\ $$\                           $$\ 
+$$  _____|$$ |                          $$ |
+$$ |      $$ | $$$$$$\  $$\   $$\  $$$$$$$ |
+$$$$$\    $$ |$$  __$$\ $$ |  $$ |$$  __$$ |
+$$  __|   $$ |$$ /  $$ |$$ |  $$ |$$ /  $$ |
+$$ |      $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |
+$$ |      $$ |\$$$$$$  |\$$$$$$$ |\$$$$$$$ |
+\__|      \__| \______/  \____$$ | \_______|
+                        $$\   $$ |          
+                        \$$$$$$  |          
+                         \______/                
+Floyd_Warshall(G){
+    for(each u in V){
+        for (each v in V){
+            if ((u,v) == E){
+                DW[u,v] &lt;- W((u,v))
+            } else {
+                DW[u,v] &lt;- +infinity
+            }
+        }
+    }
+    for (i &lt;- 2 to |V| + 1){
+        for (each u in V){
+            for (each v in V){
+                DW[u,v] &lt;- min(DW[u,v], DW[u,i+1] + DW[i-1,v])  # uso il nodo i come ponte
+            }
+        }
+    }
+}
+</div></code></pre>
+<p><strong>complessità</strong>: $\theta(|V|^3)$ <br>
+In termini di spazio non è il massimo, perchè tiene la matrice in memoria, ma è un algoritmo molto semplice da implementare, e quindi è usato in molti casi, anche se non è il più efficiente (quello più efficente lo vediamo alla magistrale). <br></p>
 
 </body>
 </html>
