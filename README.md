@@ -2,6 +2,8 @@
 
 Questo repository contiene appunti e materiali di studio per vari corsi universitari. Gli appunti sono organizzati per materia e includono riassunti, esercizi svolti, e riferimenti utili.
 
+è stata create una repo <a href="https://github.com/silentXXsniper/Appunti_Uni/tree/demo" target="_blank">DEMO</a> per gli appunti aggiornati in linea di massima il giorno stesso, ma con errori e imprecisioni, mentre questa repo è quella "ufficiale" con appunti rivisti e corretti, ma aggiornati più sporadicamente.
+
 ## Struttura del Repository
 
 Gli appunti sono divisi per Anno di corso, con ogni anno che contiene cartelle per ogni materia.
