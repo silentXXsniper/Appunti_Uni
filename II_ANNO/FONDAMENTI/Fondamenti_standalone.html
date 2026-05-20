@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-05-15 14:44</span>
+        <span><b>Ultima modifica:</b> 2026-05-20 21:16</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -762,6 +762,11 @@ img {
 </ul>
 </li>
 <li><a href="#teorema-di-selberg">Teorema di Selberg</a></li>
+<li><a href="#complessit%C3%A0-computazionale">Complessità computazionale</a>
+<ul>
+<li><a href="#decimali-vs-minimizzazione">Decimali vs Minimizzazione</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -4308,6 +4313,116 @@ $$\huge B \text {r.e.}$$</p>
 <li>tra questi ci sarà uno che sempre compare per primo nella enumerazione</li>
 </ul>
 </li>
+</ol>
+<p>!!foto di prima</p>
+<p>!!!INIZIO PARTE APPUNTI FATTI MALE</p>
+<p>$$A = \lbrace x :  (x,2x+1) \in B \rbrace ( \forall y \in \mathbb{N} )(\varphi _x(y) 5) \rbrace$$
+$$B = \lbrace x : (\forall y \in \mathbb{N} )(\varphi _x(y) x) \rbrace$$</p>
+<p>Per B non possiamo usare il teorama di Rice, perchè non è estensionale, ma per A si, perchè è estensionale. <br></p>
+<p>$$\psi (a,b) = \begin{cases} a \\text{ provo} &amp; a \in K \\ \uparrow &amp; \text{else} \end{cases}$$</p>
+<p>$$a \in \overline{K} \to \forall b \varphi _{g(a)}(b)  = X \downarrow \to g(a) \in A \implies    text{ Vale Ancora} $$
+$$a\notin K \to \forall b \varphi _{g(a)}(b) \uparrow \to g(a) \notin A \implies    text{ Vale Ancora} \implies \text{NON FUNZIONA}$$</p>
+<p>Sarebbe un GRAN errore,provare a sostituire $a$ con $g(a)$, perchè se $a \in K$ allora $g(a) \in A$, ma se $a \notin K$ allora $g(a) \notin A$, e quindi non è vero che $\forall b \varphi _{g(a)}(b) \uparrow$ <br></p>
+<p>e andando poi a elaborare, troverei che $\varphi _{g(a)}(b) = a$, il che sarebbe errato.</p>
+<p>!!! FINE APPUNTI FATTI MALE</p>
+<p>$$x \in B$$
+$$\psi (a,b,c) = \begin{cases} b &amp; a \in K  \\ \uparrow &amp; \text{else} \end{cases}$$
+Per teorema S-M-N $\exists g$ ric. totaele tale che:
+$$\forall a,b,c \quad \varphi _{g(a,b)}(c) = \psi (a,b,c)$$
+Per il II teorema di ricorsione $\exists \nu$ tale che:
+$$\forall a \quad \varphi _{a,\nu(a)} = \varphi _{\nu(a)}$$
+$$a \in K \to \varphi _{g(a,\nu(a))}(c) = \varphi _{\nu(a)}(c) = \nu(a) \to \nu(a) \in B$$
+$$a \notin K \to \varphi _{g(a,\nu(a))}(c) = \varphi _{\nu(a)}(c) \uparrow \to \nu(a) \notin B$$</p>
+<p>ho dovuto usare un paremtro in più, perchè con solo due al cambiare di uno cambiava anche l'altro.</p>
+<p>Potremmo prender anche una strada più furba:</p>
+<p>$$C = \lbrace x : \varphi _ x(x) = x \rbrace$$
+questo intuitivamente è r.e.:</p>
+<p>C è r.e.e Dato x eseguo M_x(x) e se termina controllo se l'output è x, in caso affermativo accetto, altrimenti loop. <br></p>
+<p>$$\psi (a,b) = \begin{cases} a \text{ non funziona} &amp; a \in K  \\ \uparrow &amp; \text{else} \end{cases}$$
+è calcolabile per S-M-N $\exists g$ tale che:
+$$\exists g \text{ ricorsiva totale} \quad \varphi _{g(a)}(b) = \psi (a,b)$$</p>
+<p>controllando i due casi visti prima, otteniamo che:
+nel primo caso otteniamo che $\ldots \to g(a) \notin C$ <br>
+nel secondo caso otteniamo che $\ldots \to \forall b \varphi _{g(a)}(b) = a$ <br></p>
+<p>e quindi non funziona. <br>
+funzionerebbe usando questo principio con dei passaggi più complessi, ma non è necessario perchè grazie all'identità, c'è un modo più semplice:</p>
+<p>$$\varphi _{g(a)}(b) = a $$
+$$ \varphi _{f(a)} (b) = g(a)$$</p>
+<p><strong>esercizietto</strong>: <br></p>
+<p>$$A = \lbrace x : W_x \subseteq \lbrace 0,1 \rbrace \rbrace$$
+$$B = \lbrace x : W_x \supseteqalcotnrario \lbrace 0,1 \rbrace \rbrace$$
+$$C = \lbrace x : W_x = \lbrace 0, 1 \rbrace \rbrace$$</p>
+<p>Tutti e tre sono estensionali, tutti e 3 sono $\neq \emptyset \text { e } \neq \mathbb{N}$ <br>
+In A e C Rice-Shapiro ci dice che non è r.e. <br>
+possiamo riscrivere B anche con:
+$$B = \lbrace x :  \varphi _x(a) \downarrow \wedge \varphi _x(b) \downarrow \rbrace$$
+B r.e. Dato x eseguo $M_x(0)$ e $M_x(1)$ e se entrambe terminano, return 1, else loop.
+$$\psi (a,b) = \begin{cases} 0 &amp; a \in K  \\ \uparrow &amp; \text{else} \end{cases}$$</p>
+<p>Per S-M-N $\exists g$ ricorsiva totale tale che:
+$$a \in K \to \varphi _{g(a)}(b) = 0, \quad \varphi _{g(x)} (x) = 1 \to g(x) \in {\huge B}$$
+$$a \notin K \to \varphi _{g(a)} (a) \uparrow \to g(a) \notin B$$</p>
+<p>$$A = \lbrace   x : W_x = \emptyset \text{ or } W_x = \lbrace 0 \rbrace \text{ or } W_x = \lbrace 1 \rbrace    \text{ or } W_x = \lbrace 0, 1 \rbrace \rbrace$$
+$$\overline{A} = \lbrace x : (\exists y &gt; 1)(\varphi _ x (y) \downarrow) \rbrace$$
+A è r.e. con dog-tail: eseguo $M_x(0), M_x(1), M_x(2), \ldots$ se trovo un y &gt; 1 che termina, allora loop, else return 1 <br></p>
+<p>$$\psi (a,b) = \begin{cases} 0 &amp; a \in K  \\ \uparrow &amp; \text{else} \end{cases}$$
+$$a \in K \to \forall b \quad \varphi _{g(a)}(b) \downarrow \text{ dunque ponendo } b = 2 \to g(b) \in \overline{A}$$
+$$a \notin K \to \forall b \varphi <em>{g(a)}(b) \uparrow \to W</em>{g(a)} = \emptyset \to g(a) \in A$$</p>
+<p>&quot;Studio&quot; C: Termina in 0 (r.e.), termina in 1 (r.e.), non termina in 2,3,4,$\ldots$ <br>
+$$\overline{C} = \lbrace x : W_x \neq \lbrace 0, 1 \rbrace \rbrace$$
+in questo caso è il contrario di prima, dove termina ovunque, tranne che in 0 e 1. <br>
+proviamo con:
+$$\psi (a,b,) = \begin{cases} 0 &amp; b \neq 1 \wedge a \in K  \\ \uparrow &amp; \text{else} \end{cases}$$
+$$a \in K \to W_{g(a)} = \lbrace 0, 1 \rbrace \to g(a) \in C$$
+$$a \notin K \to W_{g(a)} = \emptyset \to g(a) \in \overline{C}$$
+con questo abbiamo dimostrato che è produttivo, NON che è completo <br></p>
+<p>A volte si pu provare anzichè usare un and, usare un or:</p>
+<p>$$\psi (a,b,) = \begin{cases} 0 &amp; b \neq 1 \underline{\text{ or }} a \in K  \\ \uparrow &amp; \text{else} \end{cases}$$
+a volte funziona, a volte non siccede nulla</p>
+<p>$a \notin K \to W_{g(a)} = \lbrace 0,1 \rbrace \to g(a) \in C$$
+$a \in K \to W_{g(a)} = \mathbb{N} \to g(a) \notin C$$</p>
+<p>Quindi C prodiuttivo, e $\overline{C}$ produttivo, ma non r.e. <br></p>
+<p>Se provassimo qualcosa di più complesso:</p>
+<p>$$A' = \lbrace x : W_x \subseteq \lbrace 0,x \rbrace \rbrace$$
+$$B' = \lbrace x : W_x \supseteqalcotnrario \lbrace 0,x \rbrace \rbrace$$
+$$C' = \lbrace x : W_x = \lbrace 0, x \rbrace \rbrace$$</p>
+<p>vale tutto come prima, TRANNE il fatto che sono estensionali. <br>
+Dal punto di vista intitivo, che il codice guardi i valori in 0, o che guardi i valori in x, non camba nulla.</p>
+<p>B' è r.e. Dato x eseguo $M_x(0)$ e $M_x(x)$ e se entrambe terminano, return 1, else loop. <br>
+A' è r.e. con dog-tail: eseguo $M_x(0), M_x(x), M_x(1), M_x(2), \ldots$ se trovo un y &gt; 1 che termina, allora loop, else return 1 <br></p>
+<p>Per C', devo provare sia con AND e con OR, dopo le dovute riduzioni, trovo che</p>
+<p>$$C = \lbrace x : W_x = \lbrace 0, 1 \rbrace \rbrace$$
+$$\psi (a,b) = \begin{cases} 0 &amp; b \leq 1  \\ \uparrow &amp; b &gt; 1 \wedge  M_x(a) \cancel{\downarrow} in \leq  \text{passi} \\ 0 &amp; else \end{cases}$$</p>
+<p>facciamo poi le riduzioni riducendolo a K</p>
+<h2 id="complessità-computazionale">Complessità computazionale</h2>
+<p>vogliamo mettere in piedi una infrastruttura che ci permetta di studiare tutti i problemi. <br>
+Classificare &quot;problemi&quot; in base alla complessità computazionale &quot;necessaria&quot; a risolvere le loro istanze.</p>
+<p>Cerchiamo quindi una funzione (il più possibile semplice - sopratutto l'andamento sintotico, non le costanti)  che &quot;approssima&quot; il numero di passi necessario IN FUNZIONE dell'input. <br></p>
+<p>Ad esempio la programmazone degli orari delle lezioni, sarebbe una matrice buleana, per vedere quali professori sono disponibili in quali orari, per provare a creare un programma delle lezioni.</p>
+<p>Ma come <strong>misuro l'input</strong>? <br></p>
+<ul>
+<li>lungezza di una stringa necessaria a descriverlo</li>
+</ul>
+<p>Ma perchè? le misurazioni con $\theta \text{ e } O$ non sempre sono precise, perchè un numero che viene elaborato con una determinata complessità, se fosse molto elevato, aumenterebbe comunque il tempo di esecuzione, rispetto ad un numero più piccolo, con la stessa complessità. <br></p>
+<pre class="hljs"><code><div>(almeno n &gt; 2)
+for i = 2 do n - 1
+    if n % i == 0
+        return composto
+return primo
+</div></code></pre>
+<p>questo algoritmo <em>appaerentemente</em> ha complessità $O(n)$, ovvero lineare. <br>
+se prendessimo <code>n = 10,000,001</code>, nel caso peggiore non sto 8 passi, ma 10m di passi. questo algoritmo quindi in proporzione alle dimensioni dell'input è esponenziale, il che è fondamentale, perchè su questo algoritmo si basa la crittografia mondiale. <br>
+La vera complessità sarebbe $O(10^{|x|})$</p>
+<p>Nella teoria della complessità <strong>MAI</strong> si usa base 1, perchè il tempo si sarebbe lineare, ma lo spazio sarebbe esponenziale.</p>
+<p>$$\text{Numeri naturali } \to \space n\begin{cases} n &amp; \cancel{\text{Base 1}} \\ Log_2(n) &amp; \text{Base 2} \\ Log_{10}(n) &amp; \text{Base 10} \end{cases}$$</p>
+<p>Problema è l'insieme delle sue istanze a cui non c'è risposta &quot;SI&quot; <br></p>
+<ul>
+<li>Roblee = insieme di stringhe</li>
+<li>Roblee = linguaggio = insieme istanze a cui rispondo &quot;SI&quot; <br></li>
+</ul>
+<h3 id="decimali-vs-minimizzazione">Decimali vs Minimizzazione</h3>
+<ol>
+<li>Trova l'alboritmo minimo da A a B (nel grafo) (prb. funzionale)</li>
+<li>esiste un cammino da A a B di distanza $\leq h$  (prb. decisionale)</li>
 </ol>
 
 </body>
