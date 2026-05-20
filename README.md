@@ -2,7 +2,17 @@
 
 Questo repository contiene appunti e materiali di studio per vari corsi universitari. Gli appunti sono organizzati per materia e includono riassunti, esercizi svolti, e riferimenti utili.
 
-<p style="color: red"><b>ATTENZIONE</b> questa è una repository di demo, i contenuti potrebbero non essere completi o accurati.</p> <br>
+```
+        _______ _______ ______ _   _ ___________ ____  _   _ ______ 
+     /\|__   __|__   __|  ____| \ | |___  /_   _/ __ \| \ | |  ____|
+    /  \  | |     | |  | |__  |  \| |  / /  | || |  | |  \| | |__   
+   / /\ \ | |     | |  |  __| | . ` | / /   | || |  | | . ` |  __|  
+  / ____ \| |     | |  | |____| |\  |/ /__ _| || |__| | |\  | |____ 
+ /_/    \_\_|     |_|  |______|_| \_/_____|_____\____/|_| \_|______|
+```                                                                  
+                                                                    
+
+Questa è una repository di demo, i contenuti potrebbero non essere completi o accurati.<br>
 Aspettatevi contenuti scritti in maniera grezza, con LaTeX non formattato, errori di battitura, mie note personali e una caterva di immagini che devono ancora essere scritti in grafici o tabelle.
 
 ## Struttura del Repository
