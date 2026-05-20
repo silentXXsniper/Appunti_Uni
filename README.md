@@ -1,6 +1,9 @@
-# Appunti Uni - IBML Uniud
+# Appunti Uni **DEMO** - IBML Uniud 
 
 Questo repository contiene appunti e materiali di studio per vari corsi universitari. Gli appunti sono organizzati per materia e includono riassunti, esercizi svolti, e riferimenti utili.
+
+<p style="color: red"><b>ATTENZIONE</b> questa è una repository di demo, i contenuti potrebbero non essere completi o accurati.</p> <br>
+Aspettatevi contenuti scritti in maniera grezza, con LaTeX non formattato, errori di battitura, mie note personali e una caterva di immagini che devono ancora essere scritti in grafici o tabelle.
 
 ## Struttura del Repository
 
