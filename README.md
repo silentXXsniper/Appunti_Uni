@@ -2,18 +2,7 @@
 
 Questo repository contiene appunti e materiali di studio per vari corsi universitari. Gli appunti sono organizzati per materia e includono riassunti, esercizi svolti, e riferimenti utili.
 
-```
-        _______ _______ ______ _   _ ___________ ____  _   _ ______ 
-     /\|__   __|__   __|  ____| \ | |___  /_   _/ __ \| \ | |  ____|
-    /  \  | |     | |  | |__  |  \| |  / /  | || |  | |  \| | |__   
-   / /\ \ | |     | |  |  __| | . ` | / /   | || |  | | . ` |  __|  
-  / ____ \| |     | |  | |____| |\  |/ /__ _| || |__| | |\  | |____ 
- /_/    \_\_|     |_|  |______|_| \_/_____|_____\____/|_| \_|______|
-```                                                                  
-                                                                    
-
-Questa è una repository di demo, i contenuti potrebbero non essere completi o accurati.<br>
-Aspettatevi contenuti scritti in maniera grezza, con LaTeX non formattato, errori di battitura, mie note personali e una caterva di immagini che devono ancora essere scritti in grafici o tabelle.
+è stata create una repo <a href="https://github.com/silentXXsniper/Appunti_Uni/tree/demo" target="_blank">DEMO</a> per gli appunti aggiornati in linea di massima il giorno stesso, ma con errori e imprecisioni, mentre questa repo è quella "ufficiale" con appunti rivisti e corretti, ma aggiornati più sporadicamente.
 
 ## Struttura del Repository
 
