@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-07-01 17:10</span>
+        <span><b>Ultima modifica:</b> 2026-07-21 18:16</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -1187,6 +1187,284 @@ laboratorio: 30</p>
 <li>quante chiavi può contenere al massimo un BT di altezza h e grado t?</li>
 </ul>
 <p><strong>passata con 25</strong></p>
+<h1 id="orali-2172026---mattina">Orali 21/7/2026 - Mattina</h1>
+<h2 id="correzione-totale-1">Correzione Totale</h2>
+<p><strong>testo:</strong> <br></p>
+<p><em>Esercizio 1.</em> <br>
+Si considerino n variabili intere $x_1, x_2,..., x_n$. Si consideri il problema di assegnare, se possibile, dei valori alle variabili in modo da soddisfare un insieme di vincoli di uguaglianza U = {$x_{i_1} = x_{i_2}, x_{i_2} = x_{i_1},...$} e un insieme di vincoli di disuguaglianza D = {$x_{j_2} ≠ x_{j_3}, x_{j_3} ≠ x_{j_4},...$}.</p>
+<ul>
+<li>Si assuma n = 4, |U|≥ 2, e |D|≥ 2. Fornire un esempio in cui è possibile trovare un assegnamento di valori per le variabili.</li>
+<li>Si assuma n = 4, |U|≥ 2, e |D|≥ 2. Fornire un esempio in cui NON è possibile trovare un assegnamento di valori per le variabili.</li>
+<li>Si proponga un algoritmo efficiente per risolvere il problema proposto, sfruttando le strutture dati per insiemi disgiunti per gestire i vincoli di uguaglianza.</li>
+<li>Si fornisca lo pseudo-codice dell'algoritmo proposto. Non è richiesto scrivere lo pseudo-codice delle operazioni su insiemi disgiunti viste a lezione.</li>
+<li>Si dimostri la correttezza della soluzione proposta e se ne valuti la complessità in funzione di n, |U|, e|D|, assumendo di implementare gli insiemi disgiunti con alberi e union by rank.<br><br>
+<em>Esercizio 2.</em> <br>
+Sia G = (V,E,W) un grafo orientato e pesato, con pesi positivi. Siano u e v due nodi di G. Si consideri il problema di contare i cammini di peso minimo da u a v.</li>
+<li>Si formalizzino usando la notazione matematica le nozioni di: (1) cammino da u a v; (2) cammino di peso minimo da u a v.</li>
+<li>Si fornisca un esempio in cui esiste più di un cammino di peso minimo che collega due nodi.</li>
+<li>Si descriva un algoritmo efficiente per risolvere il problema proposto.</li>
+<li>Si fornisca lo pseudo-codice della procedura descritta al punto c. Anche se si utilizzano procedure viste a lezione se ne riporti lo pseudo-codice.</li>
+<li>Si valuti la complessità e si dimostri la correttezza della soluzione fornita.</li>
+</ul>
+<p><strong>fine testo</strong></p>
+<p>es 1:</p>
+<p>nel esempio $n = 4 \quad |U| = 2 \quad |D| = 2$: <br>
+$$
+{x_1 = x_2, x_3 = x_4} \\ {x_1 \neq x_3, x_2 \neq x_4}
+$$</p>
+<p>$$x_1 = x_2 = 1$$
+$$x_3 = x_4 = 2$$</p>
+<p>nel caso della disuguaglianza impossibile: <br>
+$$U = {x_1 = x_2, x_2 = x_3} \quad D = {x_1 \neq x_3, \ldots }$$</p>
+<p>nella seconda parte si faceva una make per ogni variabile, e poi per ogni uguaglianza si faceva un union, e per ogni disuguaglianza si faceva un find, se il find dava lo stesso rappresentante allora non era possibile.</p>
+<p>es 2: <br></p>
+<p>definizione matematica: <br>
+sequenza di nodi</p>
+<p>appoggiarsi al algoritmo di dijkstra.</p>
+<h2 id="candidato-1-2">Candidato 1</h2>
+<p>laboratorio: 28 <br></p>
+<p><strong>domande:</strong></p>
+<ul>
+<li>grafo orientato e aciciclico, dati due nodi, nel caso peggiore quanti sono i cammini di peso minimo che collegano i due nodi?</li>
+<li>come si calcola la chiusura transitiva di un grafo?
+<ul>
+<li>spiegazione e complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 29</strong></p>
+<h2 id="candidato-2-2">Candidato 2</h2>
+<ul>
+<li>quicksort
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>bocciato</strong></p>
+<h2 id="candidato-3-2">Candidato 3</h2>
+<ul>
+<li>definizione di BST</li>
+<li>visita in order
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>perchè la vista in order su un BST è più interessante delle altre visite? (chiave stampate in ordine crescente)</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 20</strong></p>
+<h2 id="candidato-4-2">Candidato 4</h2>
+<p>30 primo, 26 secondo <br>
+laboratorio: 27</p>
+<p><strong>domande:</strong></p>
+<ul>
+<li>Cosa sono i RBT</li>
+<li>cosa vuol dire che un RBT è bilanciato?</li>
+<li>se cambiassi una delle condizioni e dicessi che per ogni nodo, il numero di nodi neri lungo un cammino fosse compreso tra un valore minimo e il doppio di quel valore, l'albero sarebbe ancora bilanciato?</li>
+</ul>
+<p>passato con 30L</p>
+<h2 id="candidato-5-2">Candidato 5</h2>
+<p>compitini: 19 20 <br>
+laboratorio: 24</p>
+<ul>
+<li>Definizione di Max Heap</li>
+<li>cosa vuol dire albinario quasi completo</li>
+<li>come memorizzo una max heap</li>
+<li>se fossi su una heap di dimensione generica, come viene memorizzata?</li>
+</ul>
+<p><strong>passato con 23</strong></p>
+<h2 id="candidato-6-2">Candidato 6</h2>
+<p>compitini: 27 20 <br>
+laboratorio: 30</p>
+<ul>
+<li>Topological sort
+<ul>
+<li>condizioni e definizione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 27</strong></p>
+<h2 id="candidato-7-2">Candidato 7</h2>
+<ul>
+<li>parla di merge sort
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 25</strong></p>
+<h2 id="candidato-8-1">Candidato 8</h2>
+<p>esame: 24 <br>
+laboratorio: 24</p>
+<p><strong>domande:</strong></p>
+<ul>
+<li>domanda sul progetto, rimozione di una chiave dall'array</li>
+<li>visita DFS
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+<li>cosa succede se invece di una pila usassi una coda per la visita DFS?</li>
+</ul>
+<p><strong>passato con 27</strong></p>
+<h1 id="orali-2172026---pomeriggio">Orali 21/7/2026 - Pomeriggio</h1>
+<h2 id="candidato-1-3">Candidato 1</h2>
+<ul>
+<li>domanda sul progetto</li>
+<li>cosa è un arco in avanti</li>
+</ul>
+<h2 id="candidato-2-3">Candidato 2</h2>
+<p>compitini: 18 16
+laboratorio: 27</p>
+<ul>
+<li>algoritmo di ordinamento a piacere (scelto quicksort)
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>bocciato - scritto non annullato</strong></p>
+<h2 id="candidato-3-3">Candidato 3</h2>
+<p>compitini 26 17 <br>
+laboratorio: 28</p>
+<p><strong>domande:</strong></p>
+<ul>
+<li>MSP
+<ul>
+<li>definizione</li>
+<li>esempi</li>
+</ul>
+</li>
+<li>definizione albero di copertura</li>
+<li>Kruskal
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 24</strong></p>
+<h2 id="candidato-4-3">Candidato 4</h2>
+<p>compitini: 30 22 <br>
+laboratorio: 27</p>
+<ul>
+<li>componenti fortemente connesse
+<ul>
+<li>definizione</li>
+<li>cosa vuol dire massimale</li>
+<li>perchè non posso usare una unica visita DFS e poi andare a produrre le componenti fortemente connesse partendo dal nodo con il numero di fine viista più basso?</li>
+<li>costo</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 28</strong></p>
+<h2 id="candidato-5-3">Candidato 5</h2>
+<p>compitini 20 26 <br>
+laboratorio: ?</p>
+<p><strong>domande:</strong></p>
+<ul>
+<li>domande sul progetto</li>
+<li>tabella di hash
+<ul>
+<li>definizione</li>
+<li>come si gestiscono le collisioni</li>
+<li>dominio e codominio della funzione di hash</li>
+<li>complessità nel caso con chaining</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 27</strong></p>
+<h2 id="candidato-6-3">Candidato 6</h2>
+<ul>
+<li>domande sul progetto</li>
+<li>visita in order</li>
+<li>scrivere una procedura ricorsiva qualsiasi e semplice, che faccia qualsiasi cosa</li>
+</ul>
+<p><em>mi rifiuto di scrivere le domande seguenti, sono di un banale imbarazzante</em></p>
+<p><strong>bocciato - scritto non annullato (non so come)</strong></p>
+<h2 id="candidato-7-3">Candidato 7</h2>
+<p>lab 27</p>
+<ul>
+<li>sono più bilanciati i RBT o gli AVL?</li>
+<li>max heap</li>
+<li>heap select</li>
+</ul>
+<p><strong>passato con 26</strong></p>
+<h2 id="candidato-8-2">Candidato 8</h2>
+<ul>
+<li>un algoritmo a scelta che non abbiamo visto oggi  (insertion sort)
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 20 - deve ancora dare laboratorio</strong></p>
+<h2 id="candidato-9-1">Candidato 9</h2>
+<ul>
+<li>Btree</li>
+<li>BST quali operazioni sai fare
+<ul>
+<li>insert pseudocodice</li>
+<li>perchè usiamo 2 puntatori</li>
+<li>complessità</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 20</strong></p>
+<h2 id="candidato-10-1">Candidato 10</h2>
+<p>compitini 22 23 <br>
+lab 27</p>
+<p><strong>domande</strong></p>
+<ul>
+<li>countingosrt
+<ul>
+<li>spiegazione</li>
+<li>pseudocodice</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 25</strong></p>
+<h2 id="candidato-11">Candidato 11</h2>
+<p>totale 16 <br>
+lab 25</p>
+<p><strong>domande</strong></p>
+<ul>
+<li>strutture dati per insiemi disgiunti
+<ul>
+<li>pseudocodice Union</li>
+<li>pseudocodice Link</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 23</strong></p>
+<h2 id="candidato-12">Candidato 12</h2>
+<p>lab 25 <br></p>
+<ul>
+<li>definizione di MaxHeap
+<ul>
+<li>operazioni che sai fare sulle heap
+<ul>
+<li>pseudocodice</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>passato con 19</strong></p>
 </body>
 </body>
 </html>
