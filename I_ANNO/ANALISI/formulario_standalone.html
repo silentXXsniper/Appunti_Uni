@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-09-01 21:40</span>
+        <span><b>Ultima modifica:</b> 2026-09-02 20:34</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -706,6 +706,12 @@ img {
 <li><a href="#formulario">Formulario</a>
 <ul>
 <li><a href="#limiti-e-analisi-asintotica">Limiti e Analisi Asintotica</a></li>
+<li><a href="#derivate">Derivate:</a></li>
+<li><a href="#serie">Serie</a>
+<ul>
+<li><a href="#serie-di-taylor">Serie di Taylor:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -831,7 +837,197 @@ $$(1+x)^{3/2} = 1 + \frac{3}{2}x + \frac{\frac{3}{2}(\frac{1}{2})}{2!}x^2 + \fra
 </ul>
 </li>
 </ol>
-<p>Serie di Taylor:</p>
+<h2 id="derivate">Derivate:</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Funzione</th>
+<th style="text-align:center">Derivata</th>
+<th style="text-align:center"></th>
+<th style="text-align:center">Funzione</th>
+<th style="text-align:center">Derivata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\mathbf{c}$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{x}$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{x^n}$</td>
+<td style="text-align:center">$n\cdot x^{n-1}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{\frac{1}{x}}$</td>
+<td style="text-align:center">$-\frac{1}{x^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\sqrt{x}}$</td>
+<td style="text-align:center">$\frac{1}{2\sqrt{x}}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{a^x}$</td>
+<td style="text-align:center">$a^x \ln(a)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\log_a(x)}$</td>
+<td style="text-align:center">$\frac{1}{x \ln(a)}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{e^x}$</td>
+<td style="text-align:center">$e^x$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\sin(x)}$</td>
+<td style="text-align:center">$\cos(x)$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{\cos(x)}$</td>
+<td style="text-align:center">$-\sin(x)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\ln(1+x)}$</td>
+<td style="text-align:center">$\frac{1}{1+x}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{\arctan(x)}$</td>
+<td style="text-align:center">$\frac{1}{1+x^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\arcsin(x)}$</td>
+<td style="text-align:center">$\frac{1}{\sqrt{1-x^2}}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{\tan(x)}$</td>
+<td style="text-align:center">$\frac{1}{\cos^2(x)} = 1 + \tan^2(x)$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\frac{1}{1-x}}$</td>
+<td style="text-align:center">$\frac{1}{(1-x)^2}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">$\mathbf{\frac{1}{1+x}}$</td>
+<td style="text-align:center">$\frac{-1}{(1+x)^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\mathbf{\sqrt{1+x}}$</td>
+<td style="text-align:center">$\frac{1}{2\sqrt{1+x}}$</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Operazione</th>
+<th>Regola</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Somma</td>
+<td>$$(f + g)' = f' + g'$$</td>
+<td>Linearità della derivata</td>
+</tr>
+<tr>
+<td>Prodotto per costante</td>
+<td>$$(cf)' = cf'$$</td>
+<td>Linearità della derivata</td>
+</tr>
+<tr>
+<td>Prodotto</td>
+<td>$$(f \cdot g)' = f'g + fg'$$</td>
+<td>Regola del prodotto</td>
+</tr>
+<tr>
+<td>Quoziente</td>
+<td>$$\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}$$</td>
+<td>Regola del quoziente</td>
+</tr>
+<tr>
+<td>Composizione</td>
+<td>$$ (f \circ g)' = f'(g(x)) \cdot g'(x) $$</td>
+<td>Regola della catena (chain rule)</td>
+</tr>
+<tr>
+<td>Funzione inversa</td>
+<td>$$(f^{-1})'(y) = \frac{1}{f'(x)} \text{ dove } y = f(x)$$</td>
+<td>Regola della funzione inversa</td>
+</tr>
+<tr>
+<td>Derivata logaritmica</td>
+<td>$$ \text{Se } y = f(x), \text{ allora } (\ln f)' = \frac{f'}{f} $$</td>
+<td>Utile per $f^g$</td>
+</tr>
+<tr>
+<td>Potenza con esponente variabile</td>
+<td>$$ (f^g)' = f^g \left(g' \ln f + g \frac{f'}{f}\right) $$</td>
+<td>Derivare $\ln y = g \ln f$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="serie">Serie</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Metodo di Risoluzione</th>
+<th style="text-align:left">Esempio Base</th>
+<th style="text-align:left">Convergenza / Divergenza</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Serie Geometrica</strong></td>
+<td style="text-align:left">$\sum_{n=0}^{\infty} q^n$</td>
+<td style="text-align:left"><strong>Conv</strong> se $|q| &lt; 1$ <br> <strong>Div</strong> se $|q| \ge 1$</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Serie Armonica Generalizzata</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \frac{1}{n^\alpha}$</td>
+<td style="text-align:left"><strong>Conv</strong> se $\alpha &gt; 1$ <br> <strong>Div</strong> se $\alpha \le 1$</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Serie Telescopica</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} (a_n - a_{n+1})$</td>
+<td style="text-align:left"><strong>Conv</strong> se $\lim_{n \to \infty} a_n = L \in \mathbb{R}$ <em>(somma = $a_1 - L$)</em> <br> <strong>Div</strong> se il limite non esiste o è $\pm\infty$</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Condizione Necessaria</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \frac{n}{n+1}$</td>
+<td style="text-align:left"><strong>Div</strong> se $\lim_{n \to \infty} a_n \neq 0$ <br> <em>(Se il limite è 0, il test non dà informazioni)</em></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Criterio del Confronto</strong></td>
+<td style="text-align:left">$\sum \frac{1}{n^2+1} \le \sum \frac{1}{n^2}$</td>
+<td style="text-align:left">Se $0 \le a_n \le b_n$: <br> $b_n$ <strong>Conv</strong> $\implies a_n$ <strong>Conv</strong> <br> $a_n$ <strong>Div</strong> $\implies b_n$ <strong>Div</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Criterio del Rapporto (d'Alembert)</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \frac{n}{2^n}$ <br> Calcolo di $L = \lim \frac{a_{n+1}}{a_n}$</td>
+<td style="text-align:left"><strong>Conv</strong> se $L &lt; 1$ <br> <strong>Div</strong> se $L &gt; 1$ <br> <em>Inconcludente</em> se $L = 1$</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Criterio della Radice (Cauchy)</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \left(\frac{n}{2n+1}\right)^n$ <br> Calcolo di $L = \lim \sqrt[n]{a_n}$</td>
+<td style="text-align:left"><strong>Conv</strong> se $L &lt; 1$ <br> <strong>Div</strong> se $L &gt; 1$ <br> <em>Inconcludente</em> se $L = 1$</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Criterio del Confronto Integrale</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \frac{1}{n^2}$ vs $\int_1^\infty \frac{1}{x^2} dx$</td>
+<td style="text-align:left">Per $a_n = f(n)$ con $f(x)&gt;0$ e decrescente: <br> <strong>Conv</strong> se l'integrale converge <br> <strong>Div</strong> se l'integrale diverge</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Criterio di Leibniz (Segni Alterni)</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \frac{(-1)^n}{n}$</td>
+<td style="text-align:left"><strong>Conv</strong> se: <br> 1) $\lim_{n \to \infty} a_n = 0$ <br> 2) $a_n$ è definitivamente decrescente</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Convergenza Assoluta</strong></td>
+<td style="text-align:left">$\sum_{n=1}^{\infty} \frac{(-1)^n}{n^2}$</td>
+<td style="text-align:left">Se $\sum |a_n|$ è <strong>Conv</strong> $\implies \sum a_n$ è <strong>Conv</strong> <br> <em>(Metodo per ridurre serie a segni variabili a serie a termini positivi)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="serie-di-taylor">Serie di Taylor:</h3>
 <table>
 <thead>
 <tr>
