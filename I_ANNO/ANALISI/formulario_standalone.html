@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-09-02 20:34</span>
+        <span><b>Ultima modifica:</b> 2026-09-02 22:00</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -710,6 +710,18 @@ img {
 <li><a href="#serie">Serie</a>
 <ul>
 <li><a href="#serie-di-taylor">Serie di Taylor:</a></li>
+</ul>
+</li>
+<li><a href="#analisi-di-funzione">Analisi di funzione</a>
+<ul>
+<li><a href="#dominio">Dominio</a></li>
+<li><a href="#simmetria-e-periodicit%C3%A0">Simmetria e periodicità</a></li>
+<li><a href="#intersezione-con-gli-assi">Intersezione con gli assi</a></li>
+<li><a href="#segno-della-funzione">Segno della funzione</a></li>
+<li><a href="#limiti-e-asintoti">Limiti e asintoti</a></li>
+<li><a href="#derivata-prima">Derivata prima</a></li>
+<li><a href="#derivata-seconda">Derivata seconda</a></li>
+<li><a href="#tracciamento-del-grafico">Tracciamento del Grafico</a></li>
 </ul>
 </li>
 </ul>
@@ -1078,6 +1090,84 @@ $$(1+x)^{3/2} = 1 + \frac{3}{2}x + \frac{\frac{3}{2}(\frac{1}{2})}{2!}x^2 + \fra
 </tr>
 </tbody>
 </table>
+<h2 id="analisi-di-funzione">Analisi di funzione</h2>
+<h3 id="dominio">Dominio</h3>
+<ul>
+<li>Relazione interna/esponenziale:</li>
+<li>relazione fratta: $\frac{1}{x} \implies x \neq 0$</li>
+<li>irrazionale: $\sqrt{x} \implies x \ge 0$</li>
+<li>logaritmica: $\ln(x) \implies x &gt; 0$</li>
+</ul>
+<h3 id="simmetria-e-periodicità">Simmetria e periodicità</h3>
+<ul>
+<li>Pari: $f(-x) = f(x)$</li>
+<li>Dispari: $f(-x) = -f(x)$</li>
+<li>Periodica: $f(x + T) = f(x)$</li>
+</ul>
+<h3 id="intersezione-con-gli-assi">Intersezione con gli assi</h3>
+<ul>
+<li>Asse x: $f(x) = 0 \implies$ risolvere $f(x) = 0$</li>
+<li>Asse y: $f(0) = y_0 \implies$ trovare il valore della funzione in 0 (se $0 \in D_f$)</li>
+</ul>
+<h3 id="segno-della-funzione">Segno della funzione</h3>
+<ul>
+<li>Positiva: $f(x) &gt; 0 \implies$ la funzione è sopra l'asse x</li>
+<li>Negativa: $f(x) &lt; 0 \implies$ la funzione è sotto l'asse x</li>
+</ul>
+<h3 id="limiti-e-asintoti">Limiti e asintoti</h3>
+<ul>
+<li>interni: $\lim_{x \to x_0^\pm} f(x) = \pm\infty \implies$ asintoto verticale $x = x_0$</li>
+<li>esterni calcolare $\lim_{x \to \pm\infty} f(x)$:
+<ul>
+<li>se $= L \text{ finito} \implies$ asintoto orizzontale $y = L$</li>
+<li>se $= \infty \implies$ asintoto obliquo:
+<ul>
+<li>calcolare $m = \lim_{x \to \pm\infty} \frac{f(x)}{x}$</li>
+<li>calcolare $q = \lim_{x \to \pm\infty} [f(x) - mx]$</li>
+<li>se m e q sono finiti $\implies$ asintoto obliquo $y = mx + q$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="derivata-prima">Derivata prima</h3>
+<ul>
+<li>calcola $f'(x)$
+<ul>
+<li>crescente: $f'(x) &gt; 0 \implies$ funzione crescente</li>
+<li>decrescente: $f'(x) &lt; 0 \implies$ funzione decrescente</li>
+<li>punti stazionari: $f'(x) = 0 \implies$ calcolare $f''(x)$
+<ul>
+<li>se $f''(x) &gt; 0 \implies$ minimo relativo</li>
+<li>se $f''(x) &lt; 0 \implies$ massimo relativo</li>
+<li>se $f''(x) = 0 \implies$ punto di flesso</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="derivata-seconda">Derivata seconda</h3>
+<ul>
+<li>calcola $f''(x)$
+<ul>
+<li>concavità:
+<ul>
+<li>se $f''(x) &gt; 0 \implies$ concava verso l'alto</li>
+<li>se $f''(x) &lt; 0 \implies$ concava verso il basso</li>
+<li>se $f''(x) = 0 \implies$  punto di flesso</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="tracciamento-del-grafico">Tracciamento del Grafico</h3>
+<ul>
+<li>Disegnare il piano cartesiano</li>
+<li>Tracciare gli asintoti (linee tratteggiate)</li>
+<li>Tracciare i punti di intersezione con gli assi</li>
+<li>Tracciare i minimi, massimi relativi e flessi</li>
+<li>unisci i punti rispettando la concavità e la monotonia della funzione</li>
+</ul>
 </body>
 </body>
 </html>
