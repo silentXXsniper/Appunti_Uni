@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-09-02 22:00</span>
+        <span><b>Ultima modifica:</b> 2026-09-10 13:37</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -705,7 +705,13 @@ img {
 <ul>
 <li><a href="#formulario">Formulario</a>
 <ul>
-<li><a href="#limiti-e-analisi-asintotica">Limiti e Analisi Asintotica</a></li>
+<li><a href="#limiti-e-analisi-asintotica">Limiti e Analisi Asintotica</a>
+<ul>
+<li><a href="#forme-indeterminate">Forme Indeterminate</a></li>
+<li><a href="#gerarchia-degli-infiniti">Gerarchia degli Infiniti</a></li>
+<li><a href="#limiti-notevoli-e-sviluppi-asintotici">Limiti Notevoli e Sviluppi Asintotici</a></li>
+</ul>
+</li>
 <li><a href="#derivate">Derivate:</a></li>
 <li><a href="#serie">Serie</a>
 <ul>
@@ -728,44 +734,17 @@ img {
 </li>
 </ul>
 <h2 id="limiti-e-analisi-asintotica">Limiti e Analisi Asintotica</h2>
-<p>Il concetto di limite è fondamentale per definire continuità, derivate e integrali. In un contesto d'esame, lo studente deve navigare attraverso la gerarchia degli infiniti, risolvere forme indeterminate e applicare tecniche di confronto asintotico.</p>
-<p><strong>2.1 Definizioni Fondamentali e Teoremi</strong></p>
-<p>Definizione Metrica di Limite:
-Sia $f: D \subseteq \mathbb{R} \to \mathbb{R}$ una funzione definita su un dominio $D$ e sia $x_0$ un punto di accumulazione per $D$. Diciamo che $\lim_{x \to x_0} f(x) = L$ se per ogni $\epsilon &gt; 0$, esiste un $\delta &gt; 0$ tale che per tutti gli $x \in D$ con $0 &lt; |x - x_0| &lt; \delta$, si ha $|f(x) - L| &lt; \epsilon$. Questa definizione formalizza l'intuizione di &quot;avvicinamento arbitrario&quot; ed è la base per dimostrare la correttezza delle approssimazioni usate nei calcoli.</p>
-<p><strong>Algebra dei Limiti</strong>:Assumendo che i limiti esistano e siano finiti, valgono le seguenti proprietà operative che permettono di scomporre problemi complessi:</p>
-<ul>
-<li>Linearità: $\lim (af \pm bg) = a \lim f \pm b \lim g$ (per costanti $a, b \in \mathbb{R}$).</li>
-<li>Prodotto: $\lim (f \cdot g) = \lim f \cdot \lim g$.</li>
-<li>Quoziente: $\lim (f / g) = \lim f / \lim g$ (purché $\lim g \neq 0$).</li>
-</ul>
-<p><strong>Forme Indeterminate:</strong> L'applicazione diretta delle regole algebriche spesso conduce a espressioni prive di significato immediato, note come forme indeterminate, che richiedono un'analisi ulteriore tramite semplificazione algebrica, limiti notevoli o sviluppi di Taylor:</p>
+<h3 id="forme-indeterminate">Forme Indeterminate</h3>
 <p>$$\frac{0}{0}, \quad \frac{\infty}{\infty}, \quad 0 \cdot \infty, \quad \infty - \infty, \quad 1^\infty, \quad 0^0, \quad \infty^0$$</p>
-<p>È cruciale notare che forme come $0/ \infty$ (che tende a 0) o $1/0$ (che tende a $\infty$ se i segni sono concordi) non sono indeterminate.</p>
-<p><strong>2.2 Gerarchia degli Infiniti (Scala di Confronto Asintotico)</strong></p>
-<p>Quando $x \to +\infty$ (o $n \to +\infty$ per le successioni), le funzioni elementari divergono a velocità differenti. Riconoscere questa gerarchia è essenziale per risolvere forme indeterminate del tipo $\frac{\infty}{\infty}$ o $0 \cdot \infty$ applicando il Principio di Sostituzione degli Infiniti.</p>
-<p><strong>La Scala di Crescita (dal più lento al più veloce):</strong>
-$$\ln(\ln x) \ll \ln x \ll x^\alpha \quad (0 &lt; \alpha &lt; 1)$$
-$$\ll x \ll x^k \quad (k &gt; 1)$$
-$$\ll a^x \quad (a &gt; 1)$$
-$$\ll n! \quad (\text{Fattoriale})$$
-$$\ll n^n \quad (\text{Esponenziale su base variabile})$$</p>
-<p>Questa gerarchia implica che, in un rapporto, la funzione a crescita più rapida domina il comportamento asintotico. In termini di &quot;o-piccolo&quot; ($o(\cdot)$), ogni termine è o-piccolo del successivo. Ad esempio: <br></p>
-<ul>
-<li>$\lim_{x \to +\infty} \frac{x^{1000}}{1.01^x} = 0$ (L'esponenziale batte la potenza, non importa quanto grande sia l'esponente).</li>
-<li>$\lim_{n \to +\infty} \frac{n!}{2^n} = +\infty$ (Il fattoriale batte l'esponenziale semplice).</li>
-</ul>
-<p><strong>Caso Speciale: Esponenziali &quot;Supremi&quot; vs Fattoriali</strong> Una distinzione sottile spesso testata negli esami (come nell'esercizio 1h di ) riguarda il confronto tra il fattoriale $n!$ e funzioni della forma $a^{n^k}$.
-Mentre $n!$ cresce più velocemente di $a^n$, esso cresce più lentamente di $a^{n^2}$ o $n^n$.
-L'approssimazione di Stirling è lo strumento definitivo per queste analisi:
-$$n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$$</p>
-<p>Sostituendo questa stima, i confronti diventano semplici algebra di potenze ed esponenziali.</p>
-<p><strong>2.3 Limiti Notevoli e Sviluppi Asintotici</strong> La padronanza dei limiti notevoli permette di risolvere forme $0/0$ associando funzioni trascendenti a polinomi (infinitesimi equivalenti). Questi equivalgono ai primi termini dello sviluppo di Maclaurin.</p>
+<h3 id="gerarchia-degli-infiniti">Gerarchia degli Infiniti</h3>
+<p>$$\ln(\ln x) \ll \ln x \ll x^\alpha \quad (0 &lt; \alpha &lt; 1) \quad \ll x \ll x^k \ll a^x  \ll n! \ll n^n$$</p>
+<h3 id="limiti-notevoli-e-sviluppi-asintotici">Limiti Notevoli e Sviluppi Asintotici</h3>
 <table>
 <thead>
 <tr>
-<th>Funzione $f(x)$ ($x \to 0$)</th>
+<th>Funzione $f(x)$</th>
 <th>Limite Notevole</th>
-<th>Infinitesimo Equivalente (Stima Asintotica)</th>
+<th>Stima Asintotica</th>
 </tr>
 </thead>
 <tbody>
@@ -814,41 +793,6 @@ $$n! \sim \sqrt{2\pi n} \left(\frac{n}{e}\right)^n$$</p>
 <p><strong>Limite di Nepero Generalizzato:</strong>
 Per risolvere forme $1^\infty$:
 $$\lim_{f(x) \to \infty} \left(1 + \frac{a}{f(x)}\right)^{f(x)} = e^a$$</p>
-<p><strong>2.4 Analisi di Casi Studio: Risoluzione Passo-Passo</strong>
-Analizziamo ora esercizi specifici derivati dalla struttura dell'esame , applicando rigorosamente i concetti sopra esposti.</p>
-<p><strong>Caso Studio A:</strong> Limite con Radicali, Trigonometria e Cancellazioni
-Consideriamo la struttura dell'esercizio 1(a) di :</p>
-<p>$$L = \lim_{x \to 0} \frac{8(x+1)^{3/2} + 5x(x+1)\sin x - 4(3e^x - \cos x)}{(\cos x - \cos 2x)(1 - \sqrt{x+1})}$$</p>
-<p><strong>Strategia di Risoluzione Dettagliata</strong>:</p>
-<ol>
-<li><strong>Analisi Preliminare della Forma</strong>:Sostituendo $x=0$:
-<ul>
-<li>Numeratore: $8(1)^{3/2} + 0 - 4(3(1) - 1) = 8 - 4(2) = 0$.</li>
-<li>Denominatore: $(1-1)(1-1) = 0$.</li>
-<li>Forma: $0/0$. L'uso diretto di De L'Hôpital è sconsigliato data la complessità delle derivate di prodotti e composizioni. Procediamo con gli sviluppi di Taylor.</li>
-</ul>
-</li>
-<li><strong>Determinazione dell'Ordine del Denominatore:</strong>
-Dobbiamo capire a quale potenza di $x$ &quot;assomiglia&quot; il denominatore per sapere a che ordine arrestare lo sviluppo del numeratore.
-<ul>
-<li>$\cos x = 1 - \frac{x^2}{2} + o(x^3)$.</li>
-<li>$\cos 2x = 1 - \frac{(2x)^2}{2} + o(x^3) = 1 - 2x^2 + o(x^3)$.</li>
-<li>Primo fattore: $(\cos x - \cos 2x) = (1 - \frac{x^2}{2}) - (1 - 2x^2) = \frac{3}{2}x^2 + o(x^3)$.</li>
-<li>Secondo fattore: $(1 - \sqrt{x+1})$.</li>
-<li>Usiamo la binomiale $(1+x)^{1/2} = 1 + \frac{1}{2}x + o(x)$.</li>
-<li>Secondo fattore: $1 - (1 + \frac{1}{2}x) = -\frac{1}{2}x + o(x)$.</li>
-<li><strong>Denominatore Totale</strong>: $\left(\frac{3}{2}x^2\right) \cdot \left(-\frac{1}{2}x\right) = -\frac{3}{4}x^3 + o(x^3)$.</li>
-<li><em>Insight</em>: Il denominatore è un infinitesimo di ordine 3. Dobbiamo sviluppare il numeratore fino all'ordine $x^3$ (incluso).</li>
-</ul>
-</li>
-<li><strong>Sviluppo del Numeratore</strong> (Termine per Termine):
-<ul>
-<li>Termine 1: $8(x+1)^{3/2}$Usiamo lo sviluppo binomiale $(1+x)^\alpha$ con $\alpha = 3/2$ fino a $n=3$:
-$$(1+x)^{3/2} = 1 + \frac{3}{2}x + \frac{\frac{3}{2}(\frac{1}{2})}{2!}x^2 + \frac{\frac{3}{2}(\frac{1}{2})(-\frac{1}{2})}{3!}x^3 + o(x^3)$$$$= 1 + \frac{3}{2}x + \frac{3}{8}x^2 - \frac{3}{48}x^3 + o(x^3) = 1 + \frac{3}{2}x + \frac{3}{8}x^2 - \frac{1}{16}x^3 + o(x^3)$$Moltiplichiamo per 8:$$8(x+1)^{3/2} = 8 + 12x + 3x^2 - \frac{1}{2}x^3 + o(x^3)$$</li>
-<li>Termine 2: $5x(x+1)\sin x$Sviluppiamo $\sin x = x - \frac{x^3}{6} + o(x^4)$ (nota: basta meno precisione qui perché c'è un fattore $x$ fuori).$$5x(x+1)(x - x^3/6 + \dots) = (5x^2 + 5x)(x - x^3/6 + \dots)$$Espandiamo concentrandoci sulle potenze fino a $x^3$:$$= 5x^2(x) + 5x(x) = 5x^3 + 5x^2$$Attenzione all'ordine.$$5x(x+1)\sin x = 5x(x+1)(x - \frac{x^3}{6}) = (5x^2+5x)(x - \frac{x^3}{6})$$$$= 5x^3 - \frac{5}{6}x^5 + 5x^2 - \frac{5}{6}x^4$$Trattenendo solo fino a $x^3$: $5x^2 + 5x^3 + o(x^3)$.</li>
-</ul>
-</li>
-</ol>
 <h2 id="derivate">Derivate:</h2>
 <table>
 <thead>
@@ -1045,48 +989,59 @@ $$(1+x)^{3/2} = 1 + \frac{3}{2}x + \frac{\frac{3}{2}(\frac{1}{2})}{2!}x^2 + \fra
 <tr>
 <th style="text-align:center">Funzione</th>
 <th style="text-align:center">Serie</th>
+<th style="text-align:center">Approssimazione (grado ≤ 5)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">$$e^x$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} \frac{x^n}{n!}$$</td>
+<td style="text-align:center">$$1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \frac{x^4}{24} + \frac{x^5}{120}$$</td>
 </tr>
 <tr>
 <td style="text-align:center">$$\sin(x)$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!}$$</td>
+<td style="text-align:center">$$x - \frac{x^3}{6} + \frac{x^5}{120}$$</td>
 </tr>
 <tr>
 <td style="text-align:center">$$\cos(x)$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!}$$</td>
+<td style="text-align:center">$$1 - \frac{x^2}{2} + \frac{x^4}{24}$$</td>
 </tr>
 <tr>
-<td style="text-align:center">$$ln(1+x)$$</td>
+<td style="text-align:center">$$\ln(1+x)$$</td>
 <td style="text-align:center">$$\sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n}$$</td>
+<td style="text-align:center">$$x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5}$$</td>
 </tr>
 <tr>
-<td style="text-align:center">$$arctan(x)$$</td>
+<td style="text-align:center">$$\arctan(x)$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{2n+1}$$</td>
+<td style="text-align:center">$$x - \frac{x^3}{3} + \frac{x^5}{5}$$</td>
 </tr>
 <tr>
-<td style="text-align:center">$$arcsin(x)$$</td>
+<td style="text-align:center">$$\arcsin(x)$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} (-1)^n \frac{(2n-1)!!}{(2n)!!} \cdot \frac{x^{2n+1}}{2n+1}$$</td>
+<td style="text-align:center">$$x + \frac{x^3}{6} + \frac{3x^5}{40}$$</td>
 </tr>
 <tr>
 <td style="text-align:center">$$\tan(x)$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} \frac{(-1)^n 2^{2n} (2^{2n} - 1) B_{2n}}{(2n)!} x^{2n-1}$$</td>
+<td style="text-align:center">$$x + \frac{x^3}{3} + \frac{2x^5}{15}$$</td>
 </tr>
 <tr>
 <td style="text-align:center">$$\frac{1}{1-x}$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} x^n$$</td>
+<td style="text-align:center">$$1 + x + x^2 + x^3 + x^4 + x^5$$</td>
 </tr>
 <tr>
 <td style="text-align:center">$$\frac{1}{1+x}$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} (-1)^n x^n$$</td>
+<td style="text-align:center">$$1 - x + x^2 - x^3 + x^4 - x^5$$</td>
 </tr>
 <tr>
 <td style="text-align:center">$$\sqrt{1+x}$$</td>
 <td style="text-align:center">$$\sum_{n=0}^{\infty} \binom{1/2}{n} x^n$$</td>
+<td style="text-align:center">$$1 + \frac{x}{2} - \frac{x^2}{8} + \frac{x^3}{16} - \frac{5x^4}{128} + \frac{7x^5}{256}$$</td>
 </tr>
 </tbody>
 </table>
