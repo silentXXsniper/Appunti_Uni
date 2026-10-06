@@ -12,6 +12,7 @@ Tutti i file sono in formato PDF, html o notebook Jupyter (.ipynb) già eseguiti
 
 I corsi seguono un color coding specifico:
 
+- Programmazione — Giallo (*#f1c40f*)
 - Algoritmi e Strutture Dati — Blu (*#3498db*)
 - Sistemi Operativi — Verde (*#1e7d45*)
 - Statistica — Arancione (*#e67e22*)
@@ -19,12 +20,17 @@ I corsi seguono un color coding specifico:
 - TW per il cloud — Viola (*#8e44ad*)
 - Machine Learning — Ciano (*#00b4d8*)
 - Fondamentali di Informatica — Blu Notte (*#2c3e50*)
+- INGEGNERIA_DEL_SOFTWARE — Rosa (*#e84393*)
+- INTERAZIONE_PERSONA_MACCHINA — Rosso Acqua (*#ff7675*)
+- INTERNET OF THINGS — Viola (*#6c5ce7*)
+- RETI — Azzurro (*#74b9ff*)
+- SOCIAL_COMPUTING — Verde Ciliegia (*#55efc4*)
 
 (a seguire verranno aggiunti altri corsi e colori)
 
 <img src="https://silentxxsniper.github.io/charts/data/Appunti_Uni-chart.png" width="100%"/>
 Per grafico interattivo:<a href="https://silentxxsniper.github.io/charts/appunti_grafico"> Link</a> <br>
-(a seguire verranno aggiunti altri corsi e colori)
+
 
 ## Note:
 
