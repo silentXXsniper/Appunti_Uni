@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAFKAQAAAABTUiuoAAACkElEQVR4nO1ay23jQAx9HA3gowy4gJQy7iAlLVLSdiCVkgICSMcAErjgR/JuLuscAhEQeRA8Mg8Enx45fDPEeNLG8qwnkK4lk4X8XDCT211/XVd/3AFsf9UkDIKUjI7VgJ6Zh1mQkXdvglHTv6YwsaYrhEKK0UpAvwBN4VETvgnLkMnC4Z9L/WfVMaHvmMbrR+VwsZZ0xVebiXgQ3O7CskxWPG6xr9bK4+tHJamEjLku0ssEwRCxpmvRbqUGzBemX+8XBuYK61aj/nXNZIXIQHX2qM0rsfFIiuB47XbS/VwA6Vq+layZCCMJmaxRrbIkYubFCSZUQ+YVh39ZYJ5k3pJGJXsLHbBsyhr6xd/ZIFaOjrWc3rVq1SMph9RYK+FNGLZWbtNWCNuQyQqRAeOWiReDUMhVDUFsexj9hsNjLad3hbYnw0gVjMauZSh4VgQTrSCfC4xN0p6MZU3b2I6gW3IrBFo2b6FNLrpbGyO6sM1gAp7LhiVCrOd2ra4OopMmtYiCoaOwWD/Z0BUl1nJ6V3hT0h5lJkspkfrYayLnLgNxKiEcGZmydG/hD1GjUnkKxC2I6RCsu3VZbZDZ2Jx7wliujT9JkSF6EchU2pVjSlGjXJIqQWI9sStcdJKqp/s/JZi1rMcBcipPYdB62LZbd1VjFxDVhsNjLemKv+489Z/Eby9+Yqx7C5/BMlkB7zxBKqGcjrR3Pe7fdHk5T0GMWM/tWvXp0/F8W0jX4ytvV6AA4iCxltO71q8ZaMNaSfFrvPrFpzbdMlmIdWICPYjUd3oQ+TihTFU3FFpqLt5u20EHzy6DpgYfAq26tycxlXYBasMCHqlb0H7rnJzTcQi0ti3E/208PNaSrshkPW2HJ+sP3F+fVy0bEd4AAAAASUVORK5CYII="
                  style="width: clamp(18px, 4vw, 32px); height: clamp(18px, 4vw, 32px);">
         </a>
-        <span><b>Ultima modifica:</b> 2026-10-06 14:58</span>
+        <span><b>Ultima modifica:</b> 2026-10-07 17:29</span>
     </div>
     <div style="
         position: absolute; left: 50%; transform: translateX(-50%);
@@ -751,6 +751,13 @@ img {
 <li><a href="#input">Input</a>
 <ul>
 <li><a href="#periferiche-per-linserimento-di-testo">Periferiche per l’inserimento di testo</a></li>
+<li><a href="#periferiche-per-lacquisizione-di-immagini">Periferiche per l’acquisizione di immagini</a></li>
+<li><a href="#periferiche-per-il-posizionamento-il-puntamento-e-il-tracciamento">Periferiche per il posizionamento, il puntamento e il tracciamento</a>
+<ul>
+<li><a href="#periferiche-per-la-rilevazione-dei-movimenti-del-corpo-o-di-parti-di-esso">Periferiche per la rilevazione dei movimenti del corpo o di parti di esso</a></li>
+<li><a href="#sensori-di-posizione-consumer-e-videocamere">Sensori di posizione consumer e videocamere</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -853,6 +860,77 @@ progettare un sistema informatico in modo che sia usabile <br></p>
 <li>ottica (Bar code o QR code)</li>
 <li>Radio (RFID)</li>
 <li>NFC</li>
+</ul>
+<h3 id="periferiche-per-lacquisizione-di-immagini">Periferiche per l’acquisizione di immagini</h3>
+<ul>
+<li>La grafica bitmap
+<ul>
+<li>Risoluzione</li>
+</ul>
+</li>
+<li>Sensori di immagine
+<ul>
+<li>Tecnologie (CCD, CMOS)</li>
+</ul>
+</li>
+<li>Immagini tri-dimensionali
+<ul>
+<li>Principi di base dell’acquisizione (fotogrammetria vs. LiDAR)</li>
+</ul>
+</li>
+</ul>
+<h3 id="periferiche-per-il-posizionamento-il-puntamento-e-il-tracciamento">Periferiche per il posizionamento, il puntamento e il tracciamento</h3>
+<p><strong>Coordinate spaziali</strong>: <br>
+il mouse rileva movimenti <strong>relativi</strong> sul piano cartesiano</p>
+<p><strong>Mouse e simili</strong></p>
+<ul>
+<li>Principi di funzionamento (movimento relativo)</li>
+<li>Modelli e tecnologia (a sfera, led, laser, trackpad)</li>
+<li>Tipo di utilizzo</li>
+<li>Mouse 3D
+<ul>
+<li>rispetto al mouse tradizionale, si passa da 2 gradi di libertà a 6 gradi di libertà (ci sono anche le rotazioni)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Joystick</strong></p>
+<ul>
+<li>Principi di funzionamento (digitale e analogico, isometrico e assoluto)</li>
+<li>Modelli e tecnologia (classico, volante, yoke)</li>
+<li>Ritorno di forza</li>
+</ul>
+<p><strong>Gamepad</strong></p>
+<p><strong>Touchpad e Touchscreen</strong></p>
+<ul>
+<li>Principi di funzionamento (resistivo e capacitivo)
+<ul>
+<li>capacitivo: rileva la variazione di capacità elettrica quando un dito tocca lo schermo</li>
+<li>resistivo: rileva la variazione di resistenza elettrica quando un dito tocca lo schermo</li>
+</ul>
+</li>
+<li>Single e Multi-touch</li>
+<li>Prodotti simili e derivati (tavoletta grafica, tabletop devices)</li>
+</ul>
+<h4 id="periferiche-per-la-rilevazione-dei-movimenti-del-corpo-o-di-parti-di-esso">Periferiche per la rilevazione dei movimenti del corpo o di parti di esso</h4>
+<ul>
+<li>Guanti e tute sensorizzati</li>
+<li>Sistemi ottici per il tracciamento in 3D (Wiimote, Kinect, depth camera)</li>
+<li>Sistemi per il tracciamento oculare
+<ul>
+<li>Principi di funzionamento (pupilla scura e pupilla luminosa)</li>
+</ul>
+</li>
+<li>Sistemi di puntamento per soggetti a ridotta mobilità</li>
+</ul>
+<h4 id="sensori-di-posizione-consumer-e-videocamere">Sensori di posizione consumer e videocamere</h4>
+<ul>
+<li>Dispositivi tracker XR
+<ul>
+<li>servono a tracciare i movimenti con 6 gradi di libertà</li>
+</ul>
+</li>
+<li>Bare hand tracking con visore</li>
+<li>Tracking con webcam o Kinect</li>
 </ul>
 </body>
 </body>
